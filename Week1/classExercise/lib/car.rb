@@ -1,5 +1,9 @@
 class Car
+	def initialize(type)
+		@type = type
+	end
+
 	def sound
-		puts "Broom"
+		puts @type
 	end
 end
