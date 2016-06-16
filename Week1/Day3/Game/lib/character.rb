@@ -32,30 +32,39 @@ class Character
 		end
 	end
 
-	def Some_action(action)
+	def Some_action(action, exit, inventory)
 		case action
 		when "hint".upcase
-			distance = Math.sqrt((@position[0]-(-1))**2 + (@position[1]-4)**2) 
-			puts "distance from the exit: #{distance}"
+			distance = Math.sqrt((@position[0]-exit[0])**2 + (@position[1]-exit[1])**2) 
+			puts "distance from the exit: #{distance.round}"
 		when "food".upcase
-			foodpos1 = [2,2]
-			foodpos2 = [-3,-4]
+			foodDist = []
+			foodpos = []
+			inventory.call_inventory("food").each do |item|
+				foodpos = foodpos.push(item)
+			end
+			foodpos.each do |item|
+				foodDist = foodDist.push(Math.sqrt((@position[0]-(item[0]))**2 + (@position[1]-item[1])**2))
+			end
 
-			foodDist1 = Math.sqrt((@position[0]-(foodpos1[0]))**2 + (@position[1]-foodpos1[1])**2) 
-			foodDist2 = Math.sqrt((@position[0]-(foodpos2[0]))**2 + (@position[1]-foodpos2[1])**2)
-			foodDist = [foodDist1, foodDist2].min
+			foodDist = foodDist.min
 
-			if @position == foodpos1 || @position == foodpos2
+			if foodpos.any? {|pos| pos == @position}
 				puts "Congrats! There is some food for you available. You are now energized."
 				@energy += 1
 				puts "your energy level is #{@energy}"
 			else
 				puts "Sorry, no food available"
-				puts "distance from nearest food: #{foodDist}"
+				puts "distance from nearest food: #{foodDist.round}"
 			end
+		when "help".upcase
+				puts "Sorry, no help is available."
 		else
-			# puts "Not sure what you're looking for"
+			# Some things
 		end
 	end
 
 end
+
+
+
