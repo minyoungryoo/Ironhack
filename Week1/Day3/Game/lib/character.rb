@@ -1,3 +1,5 @@
+require 'pry'
+
 class Character
 	attr_accessor :position, :energy
 	def initialize(position, energy)
@@ -32,9 +34,11 @@ class Character
 		end
 	end
 
-	def Some_action(action, exit, inventory)
+	def Some_action(action, exit, inventory, previous_pos)
 		case action
 		when "hint".upcase
+			# p previous_pos
+			# p @position
 			distance = Math.sqrt((@position[0]-exit[0])**2 + (@position[1]-exit[1])**2) 
 			puts "distance from the exit: #{distance.round}"
 		when "food".upcase
@@ -61,6 +65,17 @@ class Character
 				puts "Sorry, no help is available."
 		else
 			# Some things
+			# p previous_pos
+			# p @position
+			distprev = Math.sqrt((previous_pos[0]-exit[0])**2 + (previous_pos[1]-exit[1])**2) 
+			distnow = Math.sqrt((@position[0]-exit[0])**2 + (@position[1]-exit[1])**2) 
+			if distprev > distnow
+				puts "you got closer to the exit"
+			elsif distprev < distnow
+				puts "you got farther away from the exit"
+			else
+				puts "your move made no change in distance from the exit"
+			end
 		end
 	end
 

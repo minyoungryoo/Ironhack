@@ -5,6 +5,7 @@ class Game
 		@exit = exit
 		@item = Hash.new
 		@inventory = Inventory.new
+		@previous_pos = nil
 	end
 
 	def spacelimit(space)
@@ -27,9 +28,10 @@ class Game
 						puts "You won!"
 						input = "EXIT"
 					else
-					character.movement(input)
-					character.Some_action(input, @exit, @inventory)
-					item(character)
+						@previous_pos = character.position.clone
+						character.movement(input)
+						character.Some_action(input, @exit, @inventory, @previous_pos)
+						item(character)
 					end
 
 				else
