@@ -1,7 +1,7 @@
 require "sinatra"
 
 get "/" do
-	"Signature"
+	erb(:home)
 end
 
 # get "/hi" do
