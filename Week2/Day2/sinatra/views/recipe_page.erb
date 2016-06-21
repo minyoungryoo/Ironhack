@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/styles.css">
+
+<h1> My Recipe for <%= @name %></h1>
+<h2>ingredients </h2>
+
+<ol class = ingredients>
+<% @ingredients.each do |ingredient| %>
+<li> <%= ingredient %> </li>
+<% end %>
+</ol>
+
+
+<img src="/New-York-Nightlife-8.jpg">
+
