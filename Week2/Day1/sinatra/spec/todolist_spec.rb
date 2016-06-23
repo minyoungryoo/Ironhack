@@ -50,29 +50,46 @@ RSpec.describe Task do
 end
 
 RSpec.describe TodoList do
+	let(:task1) {Task.new("Buy the dog")}
+	let(:task2) {Task.new("Buy the milk")}
+	let(:task3) {Task.new("Walk the dog")}
+
+	let(:new_list) {TodoList.new("John")}
+	# let(:updated_list) {
+	# 	new_list.add_task(task1)
+	# 	new_list.add_task(task2)
+	# }
+
 	it "checking todo list" do
-		new_list = TodoList.new("John")
-		new_list.add_task(Task.new("Buy the dog"))
-		new_list.add_task(Task.new("Buy the milk"))
+		new_list.add_task(task1)
+		new_list.add_task(task2)
 		new_list.to_s
 
-		new_list.delete_task(7)
-		puts new_list
+		# new_list.delete_task(7)
+		# puts new_list
+	end
+
+	it "delete task" do
+		new_list.add_task(task1)
+		new_list.add_task(task2)
+		expect(new_list.tasks).to include(task2)
+		old_length = new_list.tasks.length
+		new_list.delete_task(task2.id)
+
+		expect(new_list.tasks).not_to include(task2)
 	end
 
 	it "find by ID" do
-		todo_list = TodoList.new("Josh")
-		todo_list.add_task(Task.new("Walk the dog"))
-		todo_list.add_task(Task.new("Buy the milk"))
-		task = todo_list.find_task_by_id(10)
-		expect(task.content).to eq("Walk the dog")
+		new_list.add_task(task1)
+		new_list.add_task(task2)
+		task = new_list.find_task_by_id(task1.id)
+		expect(task.content).to eq(task1.content)
 	end
 
 	it "ordering" do
-		todo_list = TodoList.new("Kayla")
-		todo_list.add_task(Task.new("Walk the dog"))
-		todo_list.add_task(Task.new("Buy the milk"))
-		sorted_list = todo_list.sort_by_created("ASC")
+		new_list.add_task(task1)
+		new_list.add_task(task2)
+		sorted_list = new_list.sort_by_created("ASC")
 		# [task1, task2]
 	end
 

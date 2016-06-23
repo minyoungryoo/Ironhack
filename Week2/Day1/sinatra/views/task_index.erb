@@ -1,0 +1,24 @@
+<h1>My To-do List</h1>
+
+<h2>Things to do:</h2>
+<form action ="/complete_task" method="POST">
+	<prev>
+		<ol>
+		    <% @list.each do |task| %>
+		    <li>
+	        	<%=task.content%> 
+	        	<input type="checkbox" name = "id" value = <%=task.id%> >
+	        </li>
+	       <% end %>
+	   </ol>
+	</prev>
+	
+	<button type="delete_task">Mark as complete</button>
+</form>
+
+<form action ="/new_task" method="POST">
+	<div>
+		<button type="add_new_task">Add New Task</button> 
+	</div>
+</form>
+

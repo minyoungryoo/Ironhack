@@ -1,0 +1,14 @@
+---
+Min:
+- !ruby/object:Task
+  content: Empty the trash
+  id: 1
+  complete: 0
+  created_at: 2016-06-22 19:43:17.859950000 -04:00
+  updated_at: 
+- !ruby/object:Task
+  content: Finish this exercise (or whatever its called)
+  id: 3
+  complete: 0
+  created_at: 2016-06-22 19:43:57.973112000 -04:00
+  updated_at: 
