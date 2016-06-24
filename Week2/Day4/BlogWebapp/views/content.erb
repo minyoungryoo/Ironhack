@@ -1,0 +1,14 @@
+
+<% post = @blog.posts[@index] %>
+	<h1><%= post.title %> </h1>
+	<p> Date: <%= post.date %> </p>
+	<p> Category: <%= post.category %> </p>
+	<p> Author: <%= post.author %> </p>
+	<p> Content: <%= post.text %> </p> 
+
+<form action ="/posts" method="GET">
+	<p>
+	<button type="return">Return</button>
+	</p>
+</form>
+

@@ -1,0 +1,10 @@
+<h1>Search result</h1>
+<ul>
+<% @result.each do |post| %>
+<li>
+	<p> Title: <%= post.title %> </p>
+	 <p> Category: <%= post.category %> </p>
+	<p> Author: <%= post.author %></a> </p>
+</li>
+<% end %>
+</ul>

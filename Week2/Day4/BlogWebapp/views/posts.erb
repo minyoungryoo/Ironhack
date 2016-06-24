@@ -1,0 +1,28 @@
+<h1>Welcome to My Blog!</h1>
+<h2>List of blogs:</h2>
+
+<form  action ="/draft_post" method="GET">
+<ul>
+<% @blog.posts.each_with_index do |post, index| %>
+<li>
+	<p> Title: <a href="/post_details/<%=index%>"> <%= post.title %></a> 
+	 Category: <a href="/category/<%= post.category %>"> <%= post.category %></a> 
+	Author: <a href="/author/<%= post.author %>"><%= post.author %></a> <input type="checkbox" name = "draft_index" value = "<%=index%>"> </p>
+</li> 
+<% end %>
+</ul>
+<button type="edit_post">Edit selected post</button>
+</form>
+
+<form action ="/new_post" method="GET">
+<button type="new_post">Add new post</button>
+</form>
+
+<form action ="/search_result" method="GET">
+	Search for results: <input type="text" name = "search"><button type="Search">Search</button>
+</form>
+
+
+
+
+
