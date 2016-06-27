@@ -1,0 +1,18 @@
+<h1>Movie Directors</h1>
+
+<form action ="/question_director" method="POST" >
+	<p>
+	Who is the director for the following movie?
+	</p>
+<!-- <input type="hidden" name = "movie_search" value = "<%= @movie_search%>"> -->
+
+<p><img height="800" width="520" src="<%= @rand_movie.poster%>"/></p>
+
+<ul>
+<% @result.each_with_index do |movie, index|  %>
+<p><li> <%= movie.director[0]%> 
+	<input type="checkbox" name = "movie_director" value = "<%=movie.director[0]%>"> </li></p>
+<% end %>
+</ul>
+	<button type="submit" name = "rand_director" value = "<%= @rand_director%>">Submit</button>
+</form>

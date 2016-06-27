@@ -1,0 +1,23 @@
+<h1>Congratulations! You got that correct.</h1>
+
+<img src="/congrats.gif"/>
+
+<h2>New score: <%= @score%> </h2>
+
+<h3>What would you like to do next?</h3>
+
+<form action ="/advanced_question" method="POST" >
+<p>Try more challenging questions: <button type="submit">Advanced question</button></p>
+</form>
+
+<form action ="/trivia_type" method="POST" >
+
+<p>Continue playing with the same keyword: <button type="submit" >Keep Playing</button></p>
+</form>
+
+
+<form action ="/movies_home" method="GET" >
+
+<p>Return to home page: <button type="submit" >Back to home page</button></p>
+</form>
+

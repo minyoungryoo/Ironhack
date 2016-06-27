@@ -1,0 +1,14 @@
+<h1>Movie Year</h1>
+
+<form action ="/question" method="POST" >
+	<p>
+	Which movie was released in <%= @rand_year%>?
+	</p>
+<!-- <input type="hidden" name = "movie_search" value = "<%= @movie_search%>"> -->
+
+<% @result.each_with_index do |movie, index|  %>
+<p><img height="400" width="270" src= "<%= movie.poster%>"/> 
+	<input type="checkbox" name = "movie_year" value = "<%=movie.year%>"> </p>
+<% end %>
+	<button type="submit" name = "rand_year" value = "<%= @rand_year%>">Submit</button>
+</form>
