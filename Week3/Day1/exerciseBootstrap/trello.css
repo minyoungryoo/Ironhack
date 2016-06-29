@@ -1,0 +1,245 @@
+body {
+	width: 1280px;
+	height: 364px;
+	background-image: url("https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg");
+	background-size: 1280px 728px;
+}
+
+.row{
+	line-height: 18px;
+	padding-bottom: 7px;
+}
+
+.icons {
+	width: 59px;
+	height: 31px;
+	display: inline-block;
+	padding: 8px;
+	margin: 0 5px 5px 0;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 3px;
+}
+
+.logo img{
+	width: 80px;
+	height: 30px;
+	transition: opacity ease-in 85ms;
+}
+
+.logo {
+	/*position: absolute;*/
+	background-position: top right;
+	background-size: 5pc 30px;
+	text-align: center;
+	margin-left: -40px;
+	line-height: 18px;
+	top: 5px;
+}
+
+.long_board{
+	display: inline-block;
+}
+
+.right_row {
+	width: 200px;
+	height: 30px;
+	top: 5px;
+	display: block;
+	margin-right: 8px;
+	position: absolute;
+	right: 0;
+}
+
+.right_icons {
+	color: #f3f3f3;
+	font-weight: 700;
+	width: 77px;
+	/*height: 30px;*/
+	line-height: 30px;
+	padding: 0;
+}
+
+.login {
+	background-color: transparent;
+}
+
+.long_board {
+	width: 1280px;
+	height: 57px;
+	background: #efe3c3;
+	border-bottom: 1px solid #e7d6a7;
+    font-size: 1pc;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+
+}
+
+.block_text {
+	width: 1260px;
+	height: 36px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	display: block;
+	line-height: 18px;
+}
+
+.sign_up_btn {
+	color: #f3f3f3;
+	font-weight: 700;
+}
+
+.link {
+	color: #847b62;
+	display: inline-block;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+.main_content{
+	width: 1280px;
+	height: 319px;
+    margin-right: 339px;
+        display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.main_content_wo_menu{
+	/*margin-left: 339px;*/
+	width: 941px;
+	height: 319px;
+	/*display: flex;*/
+}
+
+.long_board2{
+	width: 941px;
+	height: 46px;
+	padding: 7px 4px 8px 20px;
+	position: relative;
+	overflow: hidden;
+	line-height: 18px;
+	height: auto;
+	float: left;
+}
+
+.icons2{
+	width: 144px;
+	height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-left: 4px;
+    color: #f6f6f6;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/*.icons2 img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	display: block;
+}*/
+
+
+
+.button_txt{
+    padding-right: 8px;
+    color: #f6f6f6;
+    font-size: 9pt;
+    line-height: 30px;
+    padding-left: 30px;
+    position: relative;
+    float: left;
+    margin: 0 4px 0 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.img2{
+	height: 18px;
+	width: 18px;
+	line-height: 18px;
+	display: inline-block;
+}
+
+
+.icon-sm-business{
+	content: "\e907";
+	}
+
+.menu {
+	float: right;
+	display: inline-block;
+}
+
+.content_list_whole{
+	display: inline-block;
+}
+
+.content_list {
+	height: 127px;
+	width: 270px;
+	background: #e2e4e6;
+	margin: 0 5px;
+	border-radius: 3px;
+}
+
+.first_block{
+	position: relative;
+    padding: 8px 10px;
+    min-height: 18px;
+    display: block;
+    background: #e2e4e6;
+    vertical-align: top;
+    font-weight: 700;
+}
+
+
+
+.block {
+	height: 47px;
+	width: 240px;
+	    max-width: 300px;
+	background-color: #fff;
+	padding: 6px 6px 2px 8px;
+	border-bottom: 7px solid #ccc;
+	border-radius: 3px;
+}
+
+.block:hover {background: #f5f5f5;}
+
+.menu_body {
+	display: flex;
+	height: 333px;
+	width: 310px;
+    flex-direction: column;
+    align-items: flex-start;
+        flex-wrap: nowrap;
+}
+
+.menu_list {
+	height: 127px;
+	width: 270px;
+	background: #e2e4e6;
+	margin: 0 5px;
+	border-radius: 3px;
+}
+
+
+
+
+
+
