@@ -1,0 +1,126 @@
+html,
+body {
+	height: 100%;
+}
+
+.main_board {
+	width: 80%;
+	background-color: #E8E8E8;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 30px;
+}
+
+.sub_main_board {
+	height: 80%;
+/*	position: absolute;
+    top: 50%;
+    left: 50% */
+	width: 80%;
+	/*background-color: white;*/
+	/*margin: 50% auto;*/
+}
+
+.sub_main_txt_box{
+	height: 30%; 
+	width: 100%;
+	display: inline-block;
+	background-color: white;
+		margin-bottom: 0.5%;
+		font-size: 20px;
+		padding: 3%
+}
+
+.sub_main_txt_box img{
+	height: 45px;
+	width: 45px;
+	margin: 1%
+	}
+
+.sub_main_txt_box2{
+	height: 65%;
+	width: 100%;
+	display: inline-block;
+	background-color: white;
+}
+
+.sub_main_txt_box2 img{
+	height: 30px;
+	width: 30px;
+	margin-left: 3%;
+}
+
+.txt_types{
+	font-weight: 700;
+	color: #F3AB4C;
+	margin: 3% 2%;
+}
+
+.text_red{
+	color: #F64F5A;
+}
+
+.text_gray{
+	color: #aaa;
+}
+
+.title{
+	color: #aaa;
+	font-size: 19px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.title img{
+	height: 45px;
+	width: 45px;
+	margin: 10px;
+}
+
+.font_size {
+	font-size: 25px;
+	margin: 2%;
+}
+
+.rounded {
+	border-radius: 20px;
+	border-color: #2889D8;
+	margin: 2%;
+}
+
+.list-group-item{
+	border-color: transparent;
+}
+
+.heart_symbol{
+	color: red;
+	margin: 1%;
+}
+
+.cloud_symbol{
+	color: gray;
+	margin: 1%;
+}
+
+.list-group-item img {
+	height: 25px;
+	width: 25px;
+}
+
+.user_img {
+	display: inline-block;
+	margin: 1%;
+	float: left;
+}
+
+.user_txt {
+	display: inline-block;
+	height: 100%;	
+	float: left;
+}
+
+
+
+
+
+
+

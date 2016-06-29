@@ -1,0 +1,25 @@
+
+.header-image {
+  background-image: url('https://github.com/ironhack-miami-jun-2016/week-3-examples/blob/master/2-responsive/images/pizza-surfing.gif?raw=true');
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+
+/* between 768px and 1200px width */
+
+@media screen and (min-width: 768px) {
+  .header-image {
+    background-image: url('https://github.com/ironhack-miami-jun-2016/week-3-examples/blob/master/2-responsive/images/pizza-medium.gif?raw=true');
+    height: 700px;
+  }
+}
+
+/* 1200px width and above */
+
+@media screen and (min-width: 1200px) {
+  .header-image {
+    background-image: url('https://github.com/ironhack-miami-jun-2016/week-3-examples/blob/master/2-responsive/images/pizza-large.gif?raw=true');
+    height: 1000px;
+  }
+}
