@@ -22,6 +22,15 @@ function fileActions(err, file){
 		return theEpisode.rating >= 8.5;
 	});
 
+	function SearchFor(episode){
+		if (episode.description.indexOf("Jon") === -1){
+			console.log("Jon not found");
+		}
+		else {
+			console.log("Jon found");
+		}
+	}
+
     episodes.forEach(function(theEpisode){
     	console.log("Title:" + theEpisode.title);
 		console.log(theEpisode.description);
@@ -31,6 +40,10 @@ function fileActions(err, file){
 			stars += "*";
 		}
 		console.log("Rating:" + theEpisode.rating + " "+stars);
+		SearchFor(theEpisode);
     });
 }
 fs.readFile("./GoT.txt", 'utf8', fileActions);
+
+
+
