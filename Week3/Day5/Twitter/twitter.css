@@ -1,0 +1,26 @@
+body{
+	width: 1280px;
+	height: 9149px;
+}
+
+.nav_bar{
+	width: 1280px;
+	height: 46px;
+}
+
+.icons{
+	width: 73.6px;
+	height: 46px;
+	padding-left: 4px;
+	padding-right: 14px;
+}
+
+.right_features{
+
+}
+
+.text{
+	font-size: 13px;
+	font-weight: 500;
+	
+}
