@@ -1,0 +1,21 @@
+<form action="/lipsum/create" method="post">
+  <div>
+    <label for="lipsum_num_text">Enter desired number of paragraphs/words:</label>
+    <input type="text" name="lipsum[user_text]" id="lipsum_num_text">
+  </div>
+
+  <div>
+  	    <label for="lipsum_para_or_words">Paragraphs or words?</label>
+  	<select name="para_or_words">
+	  <option>Paragraph</option>
+	  <option>Word</option>
+	</select>
+  </div>
+
+  <!-- ***** New ***** -->
+    <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+      
+  <button type="submit">Submit text</button>
+
+</form>

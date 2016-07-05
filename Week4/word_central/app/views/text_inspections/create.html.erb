@@ -1,0 +1,11 @@
+<h1>Word Central</h1>
+
+<h2>Submit text for inspection</h2>
+
+<form action="/text_inspections" method="post">
+  <!-- [...] -->
+
+  <!-- ***** New ***** -->
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>

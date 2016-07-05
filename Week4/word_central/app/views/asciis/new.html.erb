@@ -1,0 +1,13 @@
+<form action="/asciis/process" method="post">
+  <div>
+    <label for="asciis_user_text">Type Ascii text:</label>
+    <textarea name="asciis_text[user_text]" id="asciis_user_text"></textarea>
+  </div>
+
+  <!-- ***** New ***** -->
+    <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+      
+  <button type="submit">Submit text</button>
+
+</form>
