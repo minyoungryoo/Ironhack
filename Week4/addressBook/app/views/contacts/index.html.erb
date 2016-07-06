@@ -1,0 +1,9 @@
+<h1>Contacts page</h1>
+
+<ul>
+<% @contacts_arr.each do |contact| %>
+<li> <%= contact.name %> <%= link_to "Show", "/contacts/#{contact.id}>" %> </li>
+<% end %>
+</ul>
+
+<p><%= link_to "Add contacts", "/contacts/new" %></p>
