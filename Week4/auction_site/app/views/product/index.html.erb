@@ -1,0 +1,9 @@
+<h1>List of all products</h1>
+
+<ul>
+<% @products_arr.each do |product| %>
+	<li>  
+		<%= product.title %> <%= link_to("Details", "/users/#{params[:user_id]}/products/#{product.id}") %>
+	</li>
+	<% end %>
+</ul>

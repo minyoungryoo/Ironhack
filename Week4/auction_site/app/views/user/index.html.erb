@@ -1,0 +1,9 @@
+<h1>List of all users</h1>
+
+<ul>
+<% @users_arr.each do |user| %>
+	<li>  
+		<%= user.name %> <%= link_to("Details", "/users/#{user.id}") %>
+	</li>
+	<% end %>
+</ul>

@@ -1,0 +1,18 @@
+<h1>My page</h1>
+
+<p>
+Name: <%= @the_user.name %>
+</p>
+
+<p>
+Email: <%= @the_user.email %>
+</p>
+
+
+<p>
+<%= link_to("List a new product", "/users/#{@the_user.id}/products/new") %>
+</p>
+
+
+
+

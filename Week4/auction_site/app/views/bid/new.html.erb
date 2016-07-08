@@ -1,0 +1,11 @@
+<h1> Create new bid </h1>
+
+<%= form_for [@the_product, @my_bid] do |f| %>
+	
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.label :amount %>
+	<%= f.text_field :amount %>
+	<%= f.button %>
+
+<%end%>
