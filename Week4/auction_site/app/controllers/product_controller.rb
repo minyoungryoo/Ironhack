@@ -10,6 +10,8 @@ class ProductController < ApplicationController
 		@bids = @the_product.bids
 		@users = User.order(created_at: "desc")
 
+		@owner = User.find(@the_product.user_id)
+
 		if @the_product.deadline > Time.now
 			@can_bid = true
 		else
@@ -47,7 +49,16 @@ class ProductController < ApplicationController
 	end
 
 	def destroy
-		
+		@the_product = Product.find(params[:product_id])
+		# @the_bid = @my_project.time_entries.find(params[:id])
+		@user_id = params[:user_id]
+
+		@the_product.destroy
+
+		# redirect_to ('/users/#{params[:user_id]}')
+		# redirect_to "/users/#{@the_product.user_id}"
+
+		redirect_to "/users/#{@user_id}"
 	end
 end
 

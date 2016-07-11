@@ -1,8 +1,6 @@
-<h1>My product page</h1>
+<h1>Product: <%= @the_product.title %></h1>
 
-<p>
-My product: <%= @the_product.title %>
-</p>
+<h2>Owner: <%= @owner.name %></h2>
 
 <p>
 Description: <%= @the_product.description %>
@@ -31,13 +29,13 @@ Deadline: <%= @the_product.deadline %>
 <h2>Actions</h2>
 
 <% if @can_bid %>
-<p>
-<%= link_to("Bid on this product", "/users/#{params[:user_id]}/products/#{@the_product.id}/bids/new") %>
-</p>
+	<p>
+	<%= link_to("Bid on this product", "/users/#{params[:user_id]}/products/#{@the_product.id}/bids/new") %>
+	</p>
 <% else %>
-<p>
-Winning bidder: <%= @winning_bidder %>
-</p>
+	<p>
+	Winning bidder: <%= @winning_bidder %>
+	</p>
 <% end %>
 
 <p>

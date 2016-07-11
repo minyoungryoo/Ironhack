@@ -6,9 +6,17 @@ Rails.application.routes.draw do
 
     get '/users', to: 'user#index'
 
+    get '/users/login', to: 'user#login'
+
+    post '/users/login', to: 'user#login_verify'
+ 
     get '/users/:user_id', to: 'user#show'
 
     post '/users', to: 'user#create'
+
+    get '/users/:user_id/products/:product_id/my_page', to: 'user#my_page'
+
+    get '/users/:user_id/products/:product_id/my_page/delete', to: 'product#destroy'
 
 
   	get '/users/:user_id/products/new', to: 'product#new'

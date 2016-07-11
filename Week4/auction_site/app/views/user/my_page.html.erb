@@ -1,0 +1,34 @@
+<h1>My Product Details</h1>
+
+<p>
+Description: <%= @the_product.description %>
+</p>
+
+<p>
+Deadline: <%= @the_product.deadline %>
+</p>
+
+<h2> Current bid summary </h2>
+
+<!-- if any... -->
+<% if @bids.length >= 1%>
+	<ol>
+			<% @bids.each do |bid| %>
+		<li>
+				<p> Name: <%= @users.find(bid.user_id).name %> </p>
+				<p> Bid amount: $<%= bid.amount %> </p>
+		</li>
+			<% end %>
+	</ol>
+<% else %>
+	None
+<% end %>
+
+<p>
+<%= link_to("Delete current product", "/users/#{params[:user_id]}/products/#{params[:product_id]}/my_page/delete") %>
+</p>
+
+<p>
+<%= link_to("Return to my page", "/users/#{params[:user_id]}") %>
+</p>
+

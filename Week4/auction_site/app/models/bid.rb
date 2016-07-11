@@ -5,7 +5,12 @@ class Bid < ApplicationRecord
 	validate :price_range, :user_product
 
 	def price_range
+
+		if Bid.order(amount: "desc")[0] != nil
 		highest_bid = Bid.order(amount: "desc")[0].amount
+		else
+			highest_bid = 0
+		end
 
 		if amount < product.min_bid
 			errors.add(:amount, "can't bid less than minimum amount set by user")

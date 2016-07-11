@@ -9,10 +9,22 @@ Email: <%= @the_user.email %>
 </p>
 
 
+<p>My list of products:</p>
+<ul>
+<% @my_products_arr.each do |product| %>
+	<li>  
+		<%= product.title %> <%= link_to("Details", "/users/#{params[:user_id]}/products/#{product.id}/my_page") %>
+
+	</li>
+	<% end %>
+</ul>
+
 <p>
 <%= link_to("List a new product", "/users/#{@the_user.id}/products/new") %>
 </p>
 
-
+<p>
+<%= link_to("View existing products", "/users/#{@the_user.id}/products") %>
+</p>
 
 

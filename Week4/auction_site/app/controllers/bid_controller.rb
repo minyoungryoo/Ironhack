@@ -6,7 +6,8 @@ class BidController < ApplicationController
 		
 		@my_bid = Bid.new(
 			:amount => @amt_bid,
-			:user_id => User.find_by(email: params[:bid][:email]).id,
+			# :user_id => User.find_by(email: params[:bid][:email]).id,
+			:user_id => params[:user_id],
 			:product_id => @the_product.id
 		)
 
