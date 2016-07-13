@@ -28,10 +28,3 @@ vehicles = [Boat.new, Airplane.new, Car.new, Motorcycle.new]
 first_sum = Total_class.new
 first_sum.all_noises(vehicles)
 first_sum.tot_num_wheels(vehicles)
-# puts vehicles[2].num_wheels.to_i + vehicles[1].num_wheels.to_i
-# vehicles[2].num_wheels.class
-
-		# vehicles.each do |vehicle|
-		# 	vehicle.num_wheels + 1
-		# end
- 	# 	puts vehicles

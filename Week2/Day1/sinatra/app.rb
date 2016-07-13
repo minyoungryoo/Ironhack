@@ -8,12 +8,6 @@ require_relative('lib/storage.rb')
 
 todo_list = TodoList.new("Min")
 todo_list.load_tasks
-# task1 = Task.new("Walk the dog")
-# task2 = Task.new("Brush teeth")
-# todo_list.add_task(task1)
-# todo_list.add_task(task2)
-# todo_list.storage
-# p todo_list.load_tasks
 
 get "/tasks" do
 	@list = todo_list.tasks

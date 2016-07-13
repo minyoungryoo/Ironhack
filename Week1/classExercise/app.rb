@@ -1,5 +1,6 @@
 require_relative("lib/spaceship.rb")   #linking to another file to let ruby know that next few lines come from another file defining class
 require_relative("lib/car.rb")
+require_relative("lib/lightspeed_ship.rb")
 
 
 first_spaceship = Spaceship.new("Woooshhh", 50)
@@ -21,3 +22,9 @@ Car1.sound
 
 Car2 = Car.new("BROOOOOOM")
 Car2.sound
+
+puts "======================="
+
+lightspeed_ship = LightspeedShip.new("Bzzzzt",20)
+lightspeed_ship.fly
+lightspeed_ship.travel("Black Hole")

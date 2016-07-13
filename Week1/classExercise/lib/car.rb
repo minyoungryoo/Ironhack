@@ -6,4 +6,8 @@ class Car
 	def sound
 		puts @type
 	end
+
+	def cities
+		
+	end
 end

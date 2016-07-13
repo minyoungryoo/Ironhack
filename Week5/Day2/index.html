@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<h1>AJAX</h1>
+	</div>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// console.log(arguments)
+
+		function fetchCharacters(){
+		  var httpRequest = new XMLHttpRequest();
+
+		  httpRequest.onreadystatechange = handleResponse;
+		  httpRequest.open("GET", "https://ironhack-characters.herokuapp.com/characters");
+		  httpRequest.send();
+		}
+		function handleResponse (event) {
+		  var httpRequest = event.currentTarget;
+
+		  if (httpRequest.readyState === 4) {
+		    if (httpRequest.status === 200) {
+		      var dataString = httpRequest.responseText;
+		      var charactersArray = JSON.parse(dataString);
+		      showCharacters(charactersArray);
+		    }
+		    else {
+		      alert("There was an error");
+		    }
+		  }
+		}
+
+		function showCharacters (charactersArray) {
+		  charactersArray.forEach(function (theCharacter) {
+		    // create new DOM node and inner HTML for each character
+		    // appended each one to the character list
+		    console.log(theCharacter.name);
+		    $('.container').append("<p>" + theCharacter.name + "</p>");
+		  });
+		}	
+
+		function fetchCharactersWithjQuery(){
+			$.ajax({
+			  type: "GET",
+			  url: "https://ironhack-characters.herokuapp.com/characters",
+			  success: showCharacters,
+			  error: handleError
+			})
+		  var httpRequest = new XMLHttpRequest();
+
+		  httpRequest.onreadystatechange = handleResponse;
+		  httpRequest.open("GET", "https://ironhack-characters.herokuapp.com/characters");
+		  httpRequest.send();
+		}
+
+
+		fetchCharacters();	
+	});
+	</script>
+</body>
+
+
+</html>

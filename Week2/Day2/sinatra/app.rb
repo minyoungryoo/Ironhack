@@ -1,12 +1,36 @@
 require "sinatra"
+require "sinatra/reloader"
+require "pry"
+
+enable(:sessions)
 
 get "/" do
+	@current_session = session
 	erb(:home)
+
 end
 
-# get "/hi" do
-# 	"Hello, world!"
+get "/session_test" do
+	@current_session = session
+	erb(:display_the_session)
+end
+
+get "/session_add/:value" do
+	new_value = params[:value]
+	session[:new_session_values] = new_value
+
+	redirect to("/session_test")
+end 
+
+# get do
+
 # end
+
+
+get "/party" do
+	status(404)
+	erb(:party)
+end
 
 get "/about" do
 	erb(:about)
@@ -45,6 +69,9 @@ get "/users/:username" do
 		erb(:whiskey)
 	else
 		@info = users[@name]
+
+		 # binding.pry
+
 		erb(:user_profile)
 	end
 end

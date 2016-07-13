@@ -3,8 +3,8 @@ class Pit{
 	this.viking1 = viking1;
 	this.viking2 = viking2;
 	this.num_turns = 5;
-	};
-
+	
+	
 	attack(viking1, viking2){
 
 	while(this.num_turns > 0 && this.viking1.health > 0 && this.viking2.health > 0){

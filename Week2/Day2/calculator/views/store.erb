@@ -1,0 +1,6 @@
+
+<%= "The #{@symbol} of #{@first} and #{@second} is #{@result}."	%>
+
+<form action="/result" method="POST">
+<button type="submit" name="result" value = <%= @result %> >Store Result</button> 
+</form>
