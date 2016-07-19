@@ -47,6 +47,12 @@
 		  });
 		}	
 
+		function handleError (error) {
+		  console.log("Error!");
+		  console.log(error.responseText);
+		}
+
+
 		function fetchCharactersWithjQuery(){
 			$.ajax({
 			  type: "GET",
